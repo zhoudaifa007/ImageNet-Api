@@ -112,7 +112,7 @@ def _shortcut(input, residual):
 
     # 1 X 1 conv if shape is different. Else identity.
     if stride_width > 1 or stride_height > 1 or not equal_channels:
-        shortcut = Conv2D(filters=residual_shape[CHANNEL_AXIS], kernel_size=(1, 1), strides=(stride_width, stride_height), padding="valid", kernel_initializer="he_normal",kernel_regularizer=l2(0.0001))(input)
+        shortcut = Conv2D(filters=residual_shape[CHANNEL_AXIS], kernel_size=(1, 1), strides=(stride_width, stride_height), padding="same", kernel_initializer="he_normal",kernel_regularizer=l2(0.0001))(input)
     return add([shortcut, residual])
 
 
