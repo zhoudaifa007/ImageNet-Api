@@ -190,7 +190,7 @@ def not_found(error):
 
 
 def _serve_pil_image(pil_img):
-    return send_file(pil_img, mimetype='image/jpg', cache_timeout=0)
+    return send_file(pil_img, mimetype='image/jpg')
 
 
 @app.before_request
