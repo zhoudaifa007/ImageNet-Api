@@ -3,8 +3,8 @@ class http_state:
     Faile="Faile"
 
 class img_file_path:
-    File_Train="/Users/xvshu/data-xvshu/ai/image-net/train"
-    File_Test="/Users/xvshu/data-xvshu/ai/image-net/test"
+    File_Train="/home/frank/ImageNet-Api/image-net/train"
+    File_Test="/home/frank/ImageNet-Api/image-net/test"
 
 class httpResultWhiteMsg:
     @staticmethod
@@ -12,9 +12,9 @@ class httpResultWhiteMsg:
         return '<div style="color:red;font-size:36px;">'+value+'</div>'
 
 class Parameters:
-    host='127.0.0.1'
+    host='0.0.0.0'
     port=8899
-    model_path="/Users/xvshu/data-xvshu/ai/image-net/mode/eloancn_sign.model"
+    model_path="/home/frank/ImageNet-Api/image-net/mode/eloancn_sign.model"
     user="admin"
     pwd="admin"
     object_map={"000":"driverCard","001":"hkb","002":"idcard","003":"jhz",
